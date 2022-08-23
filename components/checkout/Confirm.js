@@ -37,7 +37,7 @@ class Confirm extends Component {
         className="d-flex align-items-center text-decoration-underline cursor-pointer mt-3 mt-sm-0 no-print bg-transparent"
       >
         <img src="/icon/print.svg" className="mr-2 w-20 no-print" alt=""/>
-        <div className="no-print">Print receipt</div>
+        <div className="no-print">Imprimir</div>
       </button>
     );
   }
@@ -66,7 +66,7 @@ class Confirm extends Component {
     return (
       <div className="pb-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Shipping</p>
+          <p>Frete</p>
           <p className="text-right font-weight-medium">
             ${orderReceipt.order.shipping.price.formatted_with_code}
           </p>
@@ -81,7 +81,7 @@ class Confirm extends Component {
     return (
       <div className="d-flex justify-content-between align-items-center mb-2 pt-3 border-top border-color-black">
         <p className="font-size-title font-weight-semibold">
-          Order total
+          Total
         </p>
         <p className="text-right font-weight-semibold font-size-title">
           ${orderReceipt.order.total.formatted_with_code}
@@ -108,23 +108,23 @@ class Confirm extends Component {
                   <img src="/icon/check.svg" className="w-40" alt="" />
                 </div>
                 <h3 className="text-center font-family-secondary mb-3">
-                  Thank you for your purchase!
+                  Obrigado por Comprar Conosco!
                 </h3>
                 <h4 className="text-center font-size-subheader mb-3">
-                Your order completed successfully
+                Seu pedido foi concluído com sucesso
                 </h4>
                 <p className="text-center font-color-light mb-5">
-                  Here is your order number for reference: {orderReceipt.customer_reference}
+                Aqui está o número do seu pedido para referência: {orderReceipt.customer_reference}
                 </p>
                 <div className="d-flex w-100 justify-content-center flex-column flex-sm-row">
                   <Link href="/">
                     <a className="checkout-confirm-buttons px-3 py-3 text-center flex-grow-1 border bg-white border-color-gray500 font-color-light mb-2 mb-sm-0 mr-sm-2 no-print">
-                      Go back home
+                      Voltar para Loja
                     </a>
                   </Link>
                   <Link href="/collection">
                     <a className="checkout-confirm-buttons px-3 py-3 text-center flex-grow-1 bg-black font-color-white no-print">
-                      Continue shopping
+                      Continuar Comprando
                     </a>
                   </Link>
                 </div>
@@ -137,9 +137,9 @@ class Confirm extends Component {
                   <div className="border-bottom border-color-gray400 d-flex justify-content-between align-items-start pb-3 flex-column flex-sm-row">
                     <div>
                       <p className="font-color-light mb-2">
-                        Receipt number: {orderReceipt.customer_reference}
+                      Número do Recibo: {orderReceipt.customer_reference}
                       </p>
-                      <p className="font-size-subheader">Order details</p>
+                      <p className="font-size-subheader">Detalhes do Pedido</p>
                     </div>
                     { this.renderPrintButton() }
                   </div>

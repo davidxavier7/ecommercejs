@@ -6,6 +6,7 @@ import Animation from '../cart/Animation';
 import { Transition } from 'react-transition-group';
 import { connect } from 'react-redux'
 import { clearCustomer } from '../../store/actions/authenticateActions';
+import Image from 'next/image';
 
 const duration = 300;
 
@@ -192,7 +193,7 @@ class Header extends Component {
             </Link>
           </div>
           <div className="logo-container">
-            <img
+            <Image
               src={`/icon/${showMobileMenu ? 'cross' : 'menu'}.svg`}
               onClick={this.toggleMobileMenu}
               className="w-32 mr-1 d-block d-sm-none"
@@ -200,7 +201,7 @@ class Header extends Component {
             />
             <Link href="/">
               <a>
-                <img
+                <Image
                   src="/images/commerce.svg"
                   className="logo cursor-pointer"
                   alt="Logo"

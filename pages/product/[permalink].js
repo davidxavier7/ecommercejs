@@ -15,6 +15,7 @@ import Footer from '../../components/common/Footer';
 import SocialMedia from '../../components/common/SocialMedia';
 import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
+import Image from 'next/image';
 
 const detailView = `<p>
   Slightly textured fabric with tonal geometric design and a bit of shine
@@ -83,10 +84,11 @@ export default function Product() {
         <div className="product-images">
           <div className="flex-grow-1">
             {Array.isArray(images) ? (images.map((image, i) => (
-              <img
+              <Image
                 key={i}
                 src={image}
                 className="w-100 mb-3 carousel-main-images"
+                alt=''
               />
             ))) : (
               ''
@@ -103,7 +105,7 @@ export default function Product() {
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
             Shipping and returns
-            <img src="/icon/plus.svg" />
+            <Image src="/icon/plus.svg" alt=''/>
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
@@ -117,7 +119,7 @@ export default function Product() {
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
             Details
-            <img src="/icon/plus.svg" />
+            <Image src="/icon/plus.svg" alt=''/>
           </div>
           <Collapse isOpened={showDetails}>
             <div

@@ -21,6 +21,7 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'next/router';
 import { CardElement, Elements, ElementsConsumer } from '@stripe/react-stripe-js';
+import Image from 'next/image';
 
 const billingOptions = ['Same as shipping Address', 'Use a different billing address'];
 
@@ -555,7 +556,7 @@ class CheckoutPage extends Component {
                     Cart
                   </a>
                 </Link>
-                <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
+                <Image src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
                 <div className="font-size-caption font-weight-bold cursor-pointer">
                   Checkout
                 </div>
@@ -745,7 +746,7 @@ class CheckoutPage extends Component {
                         className="d-flex mb-2"
                       >
                         { (item && item.media)
-                          && (<img className="checkout__line-item-image mr-2" src={item.media.source} alt={item.product_name}/>)
+                          && (<Image className="checkout__line-item-image mr-2" src={item.media.source} alt={item.product_name}/>)
                         }
                         <div className="d-flex flex-grow-1">
                           <div className="flex-grow-1">

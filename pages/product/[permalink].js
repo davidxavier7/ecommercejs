@@ -16,6 +16,7 @@ import SocialMedia from '../../components/common/SocialMedia';
 import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
 import Image from 'next/image';
+import next from 'next'
 
 const detailView = `<p>
   Slightly textured fabric with tonal geometric design and a bit of shine
